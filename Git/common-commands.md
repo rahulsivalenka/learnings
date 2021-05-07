@@ -95,7 +95,10 @@ git clone <remote/repo/url>
 This is just one time in case local branch (ex. `main`) is not tracking remote branch (ex. `main`)
 
 ```bash
-git push -u origin main
+git push -u <name-of-remote> <remote-branch>
+
+# Ex.
+# git push -u origin main
 ```
 
 We can use this once the tracking is done
