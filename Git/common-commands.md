@@ -10,7 +10,8 @@ git init
 ## To save ur work
 
 Add files to staging area i.e., stage the files u wanna commit.
-`--all` is used to add all changed files (or changes)
+
+`--all` is used to add all changed files (or changes).
 
 ```bash
 git add --all
@@ -32,10 +33,10 @@ git branch -m <new-name-of-the-current-branch>
 
 ## Linking a remote repo
 
-Before this we should create a remote repo in some server such as GitHub
+> Before this we should create a remote repo in some server such as GitHub
 
 ```bash
-git remote add origin <remote/repo/url>
+git remote add <name-of-remote> <remote/repo/url>
 
 # Ex.
 # git remote add origin https://github.com/rahulsivalenka/ui-meetup-react-working-patterns.git
@@ -47,10 +48,13 @@ git remote add origin <remote/repo/url>
 git fetch --all
 ```
 
-## Set local branch to track remote branch
+## Set current local branch to track remote branch
 
 ```bash
-git branch --set-upstream-to=origin/main
+git branch --set-upstream-to=<name-of-remote>/<branch-to-track>
+
+# Ex.
+# git branch --set-upstream-to=origin/main
 ```
 
 ## To check status of the git working tree
@@ -61,9 +65,9 @@ git status
 
 ## Pull the changes from remote
 
-Before pulling with rebase we have to make our local repo working tree clean.
-
-To make the working tree clean, commit all the changes i.e., we should not have any uncommitted changes.
+> Before pulling with rebase we have to make our local repo working tree clean i.e., we should not have any uncommitted changes.
+>
+> To make the working tree clean, commit all the changes.
 
 ```bash
 git pull --rebase
@@ -78,6 +82,12 @@ Then clone the repo
 
 ```bash
 git clone <remote/repo/url>
+
+# Ex.
+# git clone https://github.com/rahulsivalenka/ui-meetup-react-working-patterns.git
+#
+# This command will create a folder ui-meetup-react-working-patterns and download the content
+# of the remote repo into it.
 ```
 ---
 
